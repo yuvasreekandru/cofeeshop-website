@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= pageTitle %></title>
+    <!--Bootstrap cdn  -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!-- Bootstrap scripts -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <!-- Font Awesome cdn -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+    <!-- css -->
+    <link rel="stylesheet" href="css/<%= style %>">
+</head>
+<body>
+<div class="container">
+<!-- --------------First-navbar----------- -->
+  <div class="row">
+    <div class="clearfix">
+      <nav class="navbar navbar-expand-lg " id="top-nav">
+        <ul class="navbar-nav">
+         <li class="">
+           <a class="" href="registration">Registration</a>
+         </li>
+         <li class="">
+            <a class="" href="login" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">Log In</a>
+          </li>
+              <!-- Login pop-up -->
+               <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                 <div class="modal-dialog" role="document">
+                   <div class="modal-content">
+                     <div class="modal-header">
+                       <h5 class="modal-title" id="exampleModalLabel">Login</h5>
+                       <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                         <span aria-hidden="true">&times;</span>
+                       </button>
+                     </div>
+                     <div class="modal-body">
+                       <form>
+                         <div class="form-group">
+                           <label for="recipient-name" class="col-form-label" placeholder="email">Email</label>
+                           <input type="text" class="form-control" id="recipient-name">
+                         </div>
+                         <div class="form-group">
+                           <label for="message-text" class="col-form-label">Password</label>
+                           <input type="text" class="form-control" name="" id="">
+                         </div>
+                       </form>
+                     </div>
+                     <div class="modal-footer">
+                       <button type="button" class="btn btn-primary">Login</button>
+                     </div>
+                   </div>
+                 </div>
+               </div>
+              <!-- End pop-up -------->
+          <li class="">
+            <a class="" href="">Delivery</a>
+          </li>
+          <li class="">
+            <a class="" href="">Checkout</a>
+          </li>
+          <li class="">
+            <a class="" href="">My Account</a>
+          </li>
+        </ul>
+      </nav>
+<!-- endpart nav items--------- -->
+      <div class="end-nav" id="endpart">
+        <li class=" endpart-nav" id="endpart-nav">
+         <a class="" href=""><i class="fas fa-shopping-cart"></i></a>
+        </li> 
+        <li class="endpart-nav dropdown nav-fntawsm" id="endpart-nav">
+          <a class=" dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Cart</a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+           <a class="dropdown-item" href="#">Action</a>
+           <a class="dropdown-item" href="#">Another action</a>
+           <a class="dropdown-item" href="#">Something else here</a>
+          </div>
+        </li>
+      </div>
+    </div>
+    </div>
+   <hr class="big-hr">
+  <!-- --------------Logo---------------------- -->
+   <img class="logo" src="data:image/png;base64,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"alt="img">
+   <hr class="big-hr">
+   <hr class="sml-hr">
+  <!-- ---------------Second-navbar------------ -->
+  <div class="row" id="second-nav">
+  <nav class="navbar navbar-expand-lg ">
+      <div class="secondStart-nav">
+      <ul class="second-ul navbar-nav mr-auto">
+        <li class="  ">
+          <a class="second-a " href="/">Home </a>
+        </li>
+        <li class="dropdown">
+          <a class="second-a " href="about">About</a>
+          <div class="dropdown-content">
+            <a href="">Testimonials</a>
+            <a href="">Archives</a>
+            <a href="">FAQs</a>
+          </div>
+        </li>
+        <li class="dropdown">
+            <a class="second-a" href="#">Store</a>
+            <div class="dropdown-content">
+              <a href="">Favorite Blends</a>
+              <a href="">Dark Roast</a>
+              <a href="">Decaf</a>
+              <a href="">Flavoured Favorite</a>
+              <a href="">South of the Border</a>
+            </div>
+        </li>
+        <li class="dropdown ">
+            <a class="second-a " href="#">Gallery</a>
+            <div class="dropdown-content">
+              <a href="">Gallery 2</a>
+              <a href="">Gallery 3</a>
+              <a href="">Gallery 4</a>
+            </div>
+        </li>
+        <li class="">
+            <a class="second-a" href="blog">Blog</a>
+        </li>
+        <li class="">
+            <a class="second-a " href="contacts">Contacts</a>
+        </li>
+      </ul>
+    </div>
+        <form class="form-inline form">
+            <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+            <button class="search-icon" type="submit" value="go"><i class="fas fa-search"></i></button>
+          </form>   
+  </nav>
+  </div>
+  <hr class="sml-hr">
+</div>

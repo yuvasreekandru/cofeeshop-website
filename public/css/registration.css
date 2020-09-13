@@ -1,0 +1,18 @@
+body{
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSzS-wkTinOG3mE6AdbQ_xym0yVMPaN8G6vbA&usqp=CAU");
+    background-repeat: no-repeat;
+    background-size: 100% 120%;
+}
+.form-group{
+    width:700px;
+    height:530px;
+    background-color: white;
+    position:relative;
+    left:350px;
+    top:40px;
+    line-height:2rem;
+    padding:20px 20px ;
+}
+.btn{
+    width:25%;
+}
